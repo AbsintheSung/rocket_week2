@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./utils.css">
+    <link rel="stylesheet" href="./font.css">
+    <style>
+        
+        .container-fluid{
+            width: 100%;
+        }
+        .container{
+            max-width: 1296px; /* 1296 + 12 + 12 */
+            margin: 0 auto;
+            padding: 0px 12px;
+        }
+        
+        .header{
+            /* background-color: #AA0601; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header_imgbox{
+            padding: 16px 0px;
+        }
+        .header_imgbox img{
+            width: 80px;
+            height: 48px;
+        }
+        .header_listbox{
+            margin-left: auto;
+        }
+        .header_list{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size: 20px;
+            
+        }
+        .header_list_item{
+            padding-left: 64px;
+            text-align: end;
+        }
+
+        .main_background{
+            background-image: url('./img/home-header.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .main_section1{
+            padding-top: 296px;
+            padding-bottom: 296px;
+            color:#650300;
+            text-align: end;
+        }
+        .main_section1_title{
+            font-size: 32px;   
+        }
+        .main_section1_content{
+            font-size: 56px;
+            font-weight: bold;
+        }
+        .main_section1_link{
+            display: inline-block;
+            background-color: #AA0601;
+            font-size: 20px;
+            margin-top: 4px;
+            padding: 6px 12px;
+            color: #FFFFFF;
+        }
+
+        .main_section2{
+            padding: 80px 0px;
+            background-color: #FBF2F2;
+        }
+        .main_section2_title{
+            font-size: 48px;
+            margin-bottom: 24px;
+            font-weight: bold;
+            color:#650300;
+            text-align: center;
+        }
+        .main_section2_list{
+            display: grid;
+            grid-template-columns: repeat(4 ,1fr);
+            column-gap: 24px;
+        }
+        .main_section2_listItem{
+        
+        }
+        .section2_listItem_header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .section2_listItem_imgbox{
+            width: 100px;
+            height: 100px;
+            padding: 8px;
+        }
+        .section2_listItem_imgbox > img{
+            width: 100%;
+            height: 100%;
+        }
+        .section2_listItem_title{
+            margin-top: 16px;
+            margin-bottom: 8px;
+            font-size: 24px;
+            font-weight: bold;
+            color:#650300;
+   
+        }
+        .main_section3{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .main_section3_title{
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 48px;
+            color:#650300;
+            text-align: center;
+        }
+        .main_section3_list{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 24px;
+        }
+    
+        .main_section3_listTitle{
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 8px;
+            color:#AA0601;
+
+        }
+        .main_section4{
+            padding: 80px 0px;
+            background-image: url('./img/index-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .main_section4_title{
+            font-size: 48px;
+            margin-bottom: 48px;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        .main_section4_list{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .main_section4_listItem > img{
+            height: 240px;
+        }
+        .section4_listImg1{
+            background-image: url('./img/home-section4-1.png');
+            width: 100%;
+            height: 240px;
+        }
+        .section4_listImg2{
+            background-image: url('./img/home-section4-2.png');
+            width: 100%;
+            height: 240px;
+        }
+        .section4_listImg1,
+        .section4_listImg2{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .main_section4_listItem > h3{
+            font-size:48px;
+            font-weight: bold;
+            text-align: center;
+            color:#AA0601;
+            padding: 8px 0px;
+            background-color: #FFFFFF;
+        }
+
+        .main_section5_list{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            column-gap: 24px;
+        }
+
+        .main_section5{
+            padding: 80px 0px;
+        }
+        .main_section5_title{
+            font-size: 48px;
+            font-weight: bold;
+            color: #650300;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section5_list_content{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            box-shadow: 0px 2px 6px #00000029;
+            border: 1px solid #DEE2E6;
+            border-radius: 4px;
+            opacity: 1;
+        }
+        .section5_list_contentFooter{
+            margin-top: auto;
+        }
+    
+        .section5_list_contentHeader > h3{
+            margin-top: 16px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .section5_list_contentBody{
+            margin-bottom: 80px;
+        }
+        .section5_list_contentHeader > h3,
+        .section5_list_contentBody,
+        .section5_list_contentFooter{
+            padding: 0px 16px;
+        }
+        .section5_list_contentFooter{
+            font-size: 14px;
+            color:#707070;
+            margin-bottom: 16px;
+        }   
+        .main_section6{
+            background-color: #FBF2F2;
+            padding: 80px 0px;
+        }
+ 
+        .main_setion6_title{
+            text-align: center;
+            margin-bottom: 48px;
+            font-size: 48px;
+            font-weight: bold;
+            color: #650300;
+
+        }
+        .main_setion6_form{
+            width:50%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .main_setion6_form >input,
+        .main_setion6_form >textarea{
+            background-color: #FBF2F2;
+        }
+        .section6_form_text{
+            font-size: 20px;
+        }
+        @media (max-width: 1200px) {
+            .container{
+                max-width: 1200px;
+            }
+            .main_section3_listTitle{
+                font-size: 32px;
+            }
+        }
+        @media (max-width: 992px) {
+            .container{
+                /* max-width: 960px; */
+                max-width: 992px;
+            }
+            .main_section3_listTitle{
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container{
+                /* max-width: 720px; */
+                max-width: 768px;
+            }
+            .header_listbox{
+                margin-left: 0px;
+            }
+            .header_list{
+                font-size:16px;
+            }
+            .header_list_item{
+                padding-left: 32px;
+            }
+
+            .main_section2_list{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .main_section3_list{
+                grid-template-columns: repeat(1,1fr);
+                row-gap: 24px;
+            }
+            .main_section3_listTitle{
+                font-size: 48px;
+            }
+            .main_section3_listItem{
+                margin: auto;
+            }
+            .main_section3_listItem > img{
+                width: 336px;
+                height: 336px;
+            }
+            .main_section4{
+                background-image: url('./img/index-bg-md.png');
+            }
+
+            .main_section5_list{
+                grid-template-columns: repeat(2,1fr);
+                row-gap: 24px;
+            }
+            .main_setion6_title{
+                margin-bottom: 24px;
+            }
+            .main_setion6_form{
+                width: 85%;
+            }
+        }
+        @media (max-width: 576px) {
+            .container{
+                /* max-width: 540px; */
+                max-width: 576px;
+            }
+            .header_imgbox{
+                width: 100%;
+                padding-left: 15px;
+            }
+            
+            .header-pad{
+                padding: 0px;
+            }
+            .header{
+                flex-direction: column;
+            }
+  
+            .header_listbox{
+                width: 100%;
+            }
+            .header_list{
+                grid-template-columns: 1fr 1fr;
+            }
+            .header_list_item{
+                padding-left: 0px;
+                padding: 12px 0px;
+                text-align: center;
+                border: 1px solid #FFFFFF;
+            }
+            .main_background{
+                background-image: url('./img/home-header-sm.png');
+            }
+
+            .main_section1_title{
+                font-size:20px;
+            }
+            .main_section1_content{
+                font-size:32px;
+            }
+            .main_section1{
+                padding-top: 144px;
+                padding-bottom: 144px;
+            }
+            .main_section2{
+                padding: 40px 0px;
+            }
+            .main_section2_title{
+                font-size: 24px;
+            }
+            .main_section2_list{
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .main_section3{
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+            .main_section3_title{
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+
+            .main_section3_listItem > img{
+                width: 348px;
+                height: 348px;
+            }
+            .main_section4{
+                padding: 40px 0px;
+                background-image: url('./img/index-bg-sm.png');
+            }
+            .main_section4_title{
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+            .main_section4_list{
+                grid-template-columns: repeat(1,1fr);
+                row-gap: 24px;
+            }
+            .section4_listImg1{
+                background-image: url('./img/home-section4-1-sm.png');
+            }
+            .section4_listImg2{
+                background-image: url('./img/home-section4-2-sm.png');
+            }
+            .main_section5{
+                padding: 40px 0px;
+            }
+            .main_section5_list{
+                grid-template-columns: repeat(1,1fr);
+                row-gap: 16px;
+            }
+            .main_section5_title{
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+            .main_section6{
+                background-color: #FBF2F2;
+                padding: 40px 0px;
+            }
+            .main_setion6_form{
+                width: 100%;
+            }
+        }
+        @media (max-width: 375px) {
+            .container{
+                /* max-width: 372px; */
+                max-width: 375px;
+            }
+            .main_section1_title{
+                font-size:16px;
+            }
+            .main_section1_content{
+                font-size:24px;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid background_primary">
+        <header class="container header header-pad">
+            <div class="header_imgbox">
+                <img alt="公司logo" src="./img/logo-white.png">
+            </div>
+            <nav class="header_listbox">
+                <ul class="header_list">
+                    <li class="header_list_item "><a class="font-color-primary" href="#">系列鏡框</a></li>
+                    <li class="header_list_item"><a class="font-color-primary"  href="#">門市據點</a></li>
+                    <li class="header_list_item"><a class="font-color-primary"  href="#">部落格</a></li>
+                    <li class="header_list_item"><a class="font-color-primary"  href="#">常見問題</a></li>
+                </ul>
+            </nav>
+           
+        </header>
+    </div>
+   <main class="container-fluid">
+
+    <!-- 主視覺大圖 -->
+    <section class="main_background">
+        <div class="container main_section1">
+            <h1 class="main_section1_title">Promise-Desert 2020 早春系列</h1>
+            <p class="main_section1_content">看得清，才能看得遠</p>
+            <a href="#" class="main_section1_link" >立即購買</a>
+        </div>
+    </section>
+    
+    <section class="main_section2">
+
+        <div class="container">
+
+            <h2 class="main_section2_title">用專業的心，做專業的事</h2>
+            <ul class="main_section2_list">
+                <li class="main_section2_listItem">
+                    <div class="section2_listItem_header">
+                        <div class="section2_listItem_imgbox">
+                            <img alt="圖片" src="./img/home-section2-1.png">
+                        </div>
+                        <h3 class="section2_listItem_title">單一價格</h3>
+                    </div>
+                    <div class="section2_listItem_body">
+                        <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
+                    </div>
+                </li>
+                <li class="main_section2_listItem">
+                    <div class="section2_listItem_header">
+                        <div class="section2_listItem_imgbox">
+                            <img alt="圖片" src="./img/home-section2-2.png">
+                        </div>
+                        <h3 class="section2_listItem_title">20&nbsp;分鐘即可取件</h3>
+                    </div>
+                    <div class="section2_listItem_body">
+                        <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。</p>
+                    </div>
+                </li>
+                <li class="main_section2_listItem">
+                    <div class="section2_listItem_header">
+                        <div class="section2_listItem_imgbox">
+                            <img alt="圖片" src="./img/home-section2-3.png">
+                        </div>
+                        <h3 class="section2_listItem_title">安心售後服務</h3>
+                    </div>
+                    <div class="section2_listItem_body">
+                        <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
+                    </div>
+                </li>
+                <li class="main_section2_listItem">
+                    <div class="section2_listItem_header">
+                        <div class="section2_listItem_imgbox">
+                            <img alt="圖片" src="./img/home-sectioin2-4.png">
+                        </div>
+                        <h3 class="section2_listItem_title">關於鏡片</h3>
+                    </div>
+                    <div class="section2_listItem_body">
+                        <p>
+                            使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        
+    </section>
+
+    <section class="main_section3">
+        <div class="container">
+            <h2 class="main_section3_title">經典系列鏡框</h2>
+            <ul class="main_section3_list">
+                <li class="main_section3_listItem">
+                    <img alt="圖片" src="./img/home-section3-1.png">
+                    <h3 class="main_section3_listTitle">OPTICAL</h3>
+                </li>
+                <li class="main_section3_listItem">
+                    <img alt="圖片" src="./img/home-section3-2.png">
+                    <h3 class="main_section3_listTitle">SUNGLASSES</h3>
+                </li>
+                <li class="main_section3_listItem">
+                    <img alt="圖片" src="./img/home-section3-3.png">
+                    <h3 class="main_section3_listTitle">FUNCTIONAL</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="main_section4">
+        <div class="container">
+            <h2 class="main_section4_title">聯名設計鏡框</h2>
+            <ul class="main_section4_list">
+                <li class="main_section4_listItem">
+                    <!-- <img alt="圖片" src="./img/home-section4-1.png"> -->
+                    <div class="section4_listImg1"></div>
+                    <h3>DOUBLE A+</h3>
+                </li>
+                <li class="main_section4_listItem">
+                    <!-- <img alt="圖片" src="./img/home-section4-2.png"> -->
+                    <div class="section4_listImg2"></div>
+                    <h3>YOUTH</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="main_section5">
+        
+        <div class="container">
+            <h2 class="main_section5_title">顧客推薦</h2>
+            <ul class="main_section5_list">
+                <li>
+                    <div class="section5_list_content">
+                        <div class="section5_list_contentHeader">
+                            <img alt="圖片" src="./img/home-section5-1.png">
+                            <h3>Jessy</h3>
+                        </div>
+                        <div class="section5_list_contentBody">
+                            <p>眼鏡品質優良，下次還會想來這邊購買！</p>
+                        </div>
+                        <div class="section5_list_contentFooter">
+                            <time>2021/06/20</time>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="section5_list_content">
+                        <div class="section5_list_contentHeader">
+                            <img alt="圖片" src="./img/home-section5-2.png">
+                            <h3>凱倫</h3>
+                        </div>
+                        <div class="section5_list_contentBody">
+                            <p>眼鏡品質優良，下次還會想來這邊購買！</p>
+                        </div>
+                        <div class="section5_list_contentFooter">
+                            <time>2021/04/18</time>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="section5_list_content">
+                        <div class="section5_list_contentHeader">
+                            <img alt="圖片" src="./img/home-section5-3.png">
+                            <h3>悠悠</h3>
+                        </div>
+                        <div class="section5_list_contentBody">
+                            <p>謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
+                        </div>
+                        <div class="section5_list_contentFooter">
+                            <time>2020/12/25</time>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="section5_list_content">
+                        <div class="section5_list_contentHeader">
+                            <img alt="圖片" src="./img/home-section5-4.png">
+                            <h3>Kyuan</h3>
+                        </div>
+                        <div class="section5_list_contentBody">
+                            <p>服務很好，品質沒有任何問題，非常喜歡。</p>
+                        </div>
+                        <div class="section5_list_contentFooter">
+                            <time>2020/10/31</time>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="main_section6">
+
+        <div class="container">
+            <h2 class="main_setion6_title">聯絡我們</h2>
+            <form class="main_setion6_form">
+                <p class="section6_form_text">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+                <label for="fname" class="form__label">姓名</label>
+                <input type="text" class="form__input" id="fname" name="fname" placeholder="陳小明">
+
+                <label for="fphone" class="form__label">連絡電話</label>
+                <input type="tel" class="form__input" id="fphone" name="fphone" placeholder="0912-345-678">
+
+                <label for="femail" class="form__label">電子郵件</label>
+                <input type="email" class="form__input" id="femail" name="femail" placeholder="example@email.com">
+                
+                <label for="ftext" class="form__label">意見反應</label>
+                <textarea id="ftext" name="ftext" class="form__text"  placeholder="請輸入您的意見"></textarea>
+            </form>
+
+        </div>
+
+    </section>
+
+   </main>
+
+</body>
+</html>
