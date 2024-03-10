@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./utils.css">
     <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
     <style>
         
         .container-fluid{
             width: 100%;
         }
         .container{
-            max-width: 1296px; /* 1296 + 12 + 12 */
+            max-width: 1320px; /* 1296 + 12 + 12 */
             margin: 0 auto;
             padding: 0px 12px;
         }
@@ -256,9 +257,127 @@
         .main_setion6_form >textarea{
             background-color: #FBF2F2;
         }
-        .section6_form_text{
+        .section6_form_p{
             font-size: 20px;
+            margin-bottom: 24px;
         }
+        .form__label,.form__text{
+            margin-bottom: 8px;
+           
+        }
+        .form__input{
+            margin-bottom: 16px;
+            padding: 6px 12px;
+            height: 33px;
+            border: 1px solid #000000;
+        }
+        .form__text{
+            height: 136px;
+            border: 1px solid #000000;
+        }
+        .section6_form_checkbox{
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            margin-bottom: 48px;
+        }
+        .section6_form_checkbox > label{
+            margin-left: 4px;
+        }
+        .form_checkbox{
+            width: 20px;
+            height: 20px;
+        }
+  
+            
+        .form_btn{
+            width: 66%;
+            padding: 16px 0px;
+            margin: 0 auto;
+            border: none;
+            background-color: #AA0601;
+            color:#FFFFFF;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .footer_container{
+            padding-top: 48px;
+            padding-bottom: 32px;
+        }
+        .footer_section1{
+            display: flex;
+            flex-wrap:wrap;
+        }
+        .footer_list_left{
+            display: flex;
+            flex:3;
+        }
+        .footer_list_leftItem{
+            margin-right: 48px;
+        }
+        .footer_list_leftItem:last-child{
+            margin-right: 0px;
+        }
+        .footer_list_leftItem > a{
+            color:#FFFFFF
+        }
+        .footer_list_right{
+            display: flex;
+            flex:1;
+            justify-content: end;
+        }
+        .footer_list_rightItem{
+            margin-right: 32px;
+        }
+        .footer_list_rightItem:last-child{
+            margin-right: 0px;
+        }
+        .footer_list_rightItem > a{
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+        }
+        .footer_list_rightItem > a >img{
+            width: 100%;
+            height: 100%;
+        }
+        .footer_contact_list{
+            flex:0 1 100%;
+        }
+        .footer_contact_listItem{
+            display: flex;
+            align-items: center;
+            color:#FFFFFF;
+            font-size:32px;
+        }
+        .footer_contact_listItem > span{
+            margin-right: 16px;
+            font-size:36px;
+        }
+        .footer_horizontal{
+            height: 1px;
+            background-color: #FFFFFF;
+            margin: 32px 0px;
+        }
+        .footer_section2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color:#FFFFFF
+        }
+        .footer_termsList{
+            display: flex;
+        }
+        .footer_termsList > li > a{
+            font-size: 14px;
+            color:#FFFFFF
+        }
+        .footer_termsList > li:last-child{
+            margin-left: 48px;
+        }
+        
+  
         @media (max-width: 1200px) {
             .container{
                 max-width: 1200px;
@@ -323,6 +442,24 @@
             .main_setion6_form{
                 width: 85%;
             }
+            .footer_list_leftItem{
+                margin-right: 24px;
+            }
+            .footer_list_leftItem:last-child{
+                margin-right: 0px;
+            }
+            .footer_list_rightItem{
+                margin-right: 16px;
+            }
+            .footer_list_rightItem:last-child{
+                margin-right: 0px;
+            }
+            .footer_list_rightItem > a{
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+            }
+            
         }
         @media (max-width: 576px) {
             .container{
@@ -426,6 +563,43 @@
             .main_setion6_form{
                 width: 100%;
             }
+            .form_btn{
+                width: 100%;
+            }
+            .footer_section1{
+                flex-direction: row-reverse;
+            }
+            .footer_list_left{
+                display: none;
+            }
+            .footer_list_rightItem > a{
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+            }
+            .footer_contact_list{
+                flex:1;
+            }
+            .footer_contact_listItem{
+                font-size: 16px;
+            }
+            .footer_horizontal{
+                margin: 16px 0px;
+            }
+            .footer_section2{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .footer_termsList{
+               flex-direction: column;
+            }
+            .footer_termsList > li:first-child{
+                margin: 8px 0px;
+            }
+            .footer_termsList > li:last-child{
+                margin-left: 0px;
+            }
+        
         }
         @media (max-width: 375px) {
             .container{
@@ -440,13 +614,13 @@
             }
             
         }
-
+        
     </style>
 </head>
 <body>
     
-    <div class="container-fluid background_primary">
-        <header class="container header header-pad">
+    <header class="container-fluid background_primary">
+        <div class="container header header-pad">
             <div class="header_imgbox">
                 <img alt="公司logo" src="./img/logo-white.png">
             </div>
@@ -459,205 +633,291 @@
                 </ul>
             </nav>
            
-        </header>
-    </div>
+        </div>
+    </header>
+
    <main class="container-fluid">
 
-    <!-- 主視覺大圖 -->
-    <section class="main_background">
-        <div class="container main_section1">
-            <h1 class="main_section1_title">Promise-Desert 2020 早春系列</h1>
-            <p class="main_section1_content">看得清，才能看得遠</p>
-            <a href="#" class="main_section1_link" >立即購買</a>
-        </div>
-    </section>
+        <!-- 主視覺大圖 -->
+        <section class="main_background">
+            <div class="container main_section1">
+                <h1 class="main_section1_title">Promise-Desert 2020 早春系列</h1>
+                <p class="main_section1_content">看得清，才能看得遠</p>
+                <a href="#" class="main_section1_link" >立即購買</a>
+            </div>
+        </section>
+        
+        <section class="main_section2">
+
+            <div class="container">
+
+                <h2 class="main_section2_title">用專業的心，做專業的事</h2>
+                <ul class="main_section2_list">
+                    <li class="main_section2_listItem">
+                        <div class="section2_listItem_header">
+                            <div class="section2_listItem_imgbox">
+                                <img alt="圖片" src="./img/home-section2-1.png">
+                            </div>
+                            <h3 class="section2_listItem_title">單一價格</h3>
+                        </div>
+                        <div class="section2_listItem_body">
+                            <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
+                        </div>
+                    </li>
+                    <li class="main_section2_listItem">
+                        <div class="section2_listItem_header">
+                            <div class="section2_listItem_imgbox">
+                                <img alt="圖片" src="./img/home-section2-2.png">
+                            </div>
+                            <h3 class="section2_listItem_title">20&nbsp;分鐘即可取件</h3>
+                        </div>
+                        <div class="section2_listItem_body">
+                            <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。</p>
+                        </div>
+                    </li>
+                    <li class="main_section2_listItem">
+                        <div class="section2_listItem_header">
+                            <div class="section2_listItem_imgbox">
+                                <img alt="圖片" src="./img/home-section2-3.png">
+                            </div>
+                            <h3 class="section2_listItem_title">安心售後服務</h3>
+                        </div>
+                        <div class="section2_listItem_body">
+                            <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
+                        </div>
+                    </li>
+                    <li class="main_section2_listItem">
+                        <div class="section2_listItem_header">
+                            <div class="section2_listItem_imgbox">
+                                <img alt="圖片" src="./img/home-sectioin2-4.png">
+                            </div>
+                            <h3 class="section2_listItem_title">關於鏡片</h3>
+                        </div>
+                        <div class="section2_listItem_body">
+                            <p>
+                                使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            
+        </section>
+
+        <section class="main_section3">
+            <div class="container">
+                <h2 class="main_section3_title">經典系列鏡框</h2>
+                <ul class="main_section3_list">
+                    <li class="main_section3_listItem">
+                        <img alt="圖片" src="./img/home-section3-1.png">
+                        <h3 class="main_section3_listTitle">OPTICAL</h3>
+                    </li>
+                    <li class="main_section3_listItem">
+                        <img alt="圖片" src="./img/home-section3-2.png">
+                        <h3 class="main_section3_listTitle">SUNGLASSES</h3>
+                    </li>
+                    <li class="main_section3_listItem">
+                        <img alt="圖片" src="./img/home-section3-3.png">
+                        <h3 class="main_section3_listTitle">FUNCTIONAL</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main_section4">
+            <div class="container">
+                <h2 class="main_section4_title">聯名設計鏡框</h2>
+                <ul class="main_section4_list">
+                    <li class="main_section4_listItem">
+                        <!-- <img alt="圖片" src="./img/home-section4-1.png"> -->
+                        <div class="section4_listImg1"></div>
+                        <h3>DOUBLE A+</h3>
+                    </li>
+                    <li class="main_section4_listItem">
+                        <!-- <img alt="圖片" src="./img/home-section4-2.png"> -->
+                        <div class="section4_listImg2"></div>
+                        <h3>YOUTH</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main_section5">
+            
+            <div class="container">
+                <h2 class="main_section5_title">顧客推薦</h2>
+                <ul class="main_section5_list">
+                    <li>
+                        <div class="section5_list_content">
+                            <div class="section5_list_contentHeader">
+                                <img alt="圖片" src="./img/home-section5-1.png">
+                                <h3>Jessy</h3>
+                            </div>
+                            <div class="section5_list_contentBody">
+                                <p>眼鏡品質優良，下次還會想來這邊購買！</p>
+                            </div>
+                            <div class="section5_list_contentFooter">
+                                <time>2021/06/20</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section5_list_content">
+                            <div class="section5_list_contentHeader">
+                                <img alt="圖片" src="./img/home-section5-2.png">
+                                <h3>凱倫</h3>
+                            </div>
+                            <div class="section5_list_contentBody">
+                                <p>眼鏡品質優良，下次還會想來這邊購買！</p>
+                            </div>
+                            <div class="section5_list_contentFooter">
+                                <time>2021/04/18</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section5_list_content">
+                            <div class="section5_list_contentHeader">
+                                <img alt="圖片" src="./img/home-section5-3.png">
+                                <h3>悠悠</h3>
+                            </div>
+                            <div class="section5_list_contentBody">
+                                <p>謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
+                            </div>
+                            <div class="section5_list_contentFooter">
+                                <time>2020/12/25</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="section5_list_content">
+                            <div class="section5_list_contentHeader">
+                                <img alt="圖片" src="./img/home-section5-4.png">
+                                <h3>Kyuan</h3>
+                            </div>
+                            <div class="section5_list_contentBody">
+                                <p>服務很好，品質沒有任何問題，非常喜歡。</p>
+                            </div>
+                            <div class="section5_list_contentFooter">
+                                <time>2020/10/31</time>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="main_section6">
+
+            <div class="container">
+                <h2 class="main_setion6_title">聯絡我們</h2>
+                <form class="main_setion6_form">
+                    <p class="section6_form_p">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+                    <label for="fname" class="form__label">姓名</label>
+                    <input type="text" class="form__input" id="fname" name="fname" placeholder="陳小明">
+
+                    <label for="fphone" class="form__label">連絡電話</label>
+                    <input type="tel" class="form__input" id="fphone" name="fphone" placeholder="0912-345-678">
+
+                    <label for="femail" class="form__label">電子郵件</label>
+                    <input type="email" class="form__input" id="femail" name="femail" placeholder="example@email.com">
+                    
+                    <label for="ftext" class="form__label">意見反應</label>
+                    <textarea id="ftext" name="ftext" class="form__text"  placeholder="請輸入您的意見"></textarea>
+
+                    <div class="section6_form_checkbox">
+                        <input  type="checkbox" class="form_checkbox"  id="check" name="check">
+                        <label for="check">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+                    </div>
+
+                    <button class="form_btn">確認送出</button>
+                </form>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="container-fluid background_primary">
+
+        <div class="container footer_container">
+            <section class="footer_section1">
+
+                <!-- <div class="footer_list"> -->
+                    <ul class="footer_list_left">
+                        <li class="footer_list_leftItem"><a href="">首頁</a></li>
+                        <li class="footer_list_leftItem"><a href="">系列鏡框</a></li>
+                        <li class="footer_list_leftItem"><a href="">門市據點</a></li>
+                        <li class="footer_list_leftItem"><a href="">部落格</a></li>
+                        <li class="footer_list_leftItem"><a href="">常見問題</a></li>
+                    </ul>
     
-    <section class="main_section2">
-
-        <div class="container">
-
-            <h2 class="main_section2_title">用專業的心，做專業的事</h2>
-            <ul class="main_section2_list">
-                <li class="main_section2_listItem">
-                    <div class="section2_listItem_header">
-                        <div class="section2_listItem_imgbox">
-                            <img alt="圖片" src="./img/home-section2-1.png">
-                        </div>
-                        <h3 class="section2_listItem_title">單一價格</h3>
-                    </div>
-                    <div class="section2_listItem_body">
-                        <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
-                    </div>
-                </li>
-                <li class="main_section2_listItem">
-                    <div class="section2_listItem_header">
-                        <div class="section2_listItem_imgbox">
-                            <img alt="圖片" src="./img/home-section2-2.png">
-                        </div>
-                        <h3 class="section2_listItem_title">20&nbsp;分鐘即可取件</h3>
-                    </div>
-                    <div class="section2_listItem_body">
-                        <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。</p>
-                    </div>
-                </li>
-                <li class="main_section2_listItem">
-                    <div class="section2_listItem_header">
-                        <div class="section2_listItem_imgbox">
-                            <img alt="圖片" src="./img/home-section2-3.png">
-                        </div>
-                        <h3 class="section2_listItem_title">安心售後服務</h3>
-                    </div>
-                    <div class="section2_listItem_body">
-                        <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
-                    </div>
-                </li>
-                <li class="main_section2_listItem">
-                    <div class="section2_listItem_header">
-                        <div class="section2_listItem_imgbox">
-                            <img alt="圖片" src="./img/home-sectioin2-4.png">
-                        </div>
-                        <h3 class="section2_listItem_title">關於鏡片</h3>
-                    </div>
-                    <div class="section2_listItem_body">
-                        <p>
-                            使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。
-                        </p>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-        
-    </section>
-
-    <section class="main_section3">
-        <div class="container">
-            <h2 class="main_section3_title">經典系列鏡框</h2>
-            <ul class="main_section3_list">
-                <li class="main_section3_listItem">
-                    <img alt="圖片" src="./img/home-section3-1.png">
-                    <h3 class="main_section3_listTitle">OPTICAL</h3>
-                </li>
-                <li class="main_section3_listItem">
-                    <img alt="圖片" src="./img/home-section3-2.png">
-                    <h3 class="main_section3_listTitle">SUNGLASSES</h3>
-                </li>
-                <li class="main_section3_listItem">
-                    <img alt="圖片" src="./img/home-section3-3.png">
-                    <h3 class="main_section3_listTitle">FUNCTIONAL</h3>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="main_section4">
-        <div class="container">
-            <h2 class="main_section4_title">聯名設計鏡框</h2>
-            <ul class="main_section4_list">
-                <li class="main_section4_listItem">
-                    <!-- <img alt="圖片" src="./img/home-section4-1.png"> -->
-                    <div class="section4_listImg1"></div>
-                    <h3>DOUBLE A+</h3>
-                </li>
-                <li class="main_section4_listItem">
-                    <!-- <img alt="圖片" src="./img/home-section4-2.png"> -->
-                    <div class="section4_listImg2"></div>
-                    <h3>YOUTH</h3>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="main_section5">
-        
-        <div class="container">
-            <h2 class="main_section5_title">顧客推薦</h2>
-            <ul class="main_section5_list">
-                <li>
-                    <div class="section5_list_content">
-                        <div class="section5_list_contentHeader">
-                            <img alt="圖片" src="./img/home-section5-1.png">
-                            <h3>Jessy</h3>
-                        </div>
-                        <div class="section5_list_contentBody">
-                            <p>眼鏡品質優良，下次還會想來這邊購買！</p>
-                        </div>
-                        <div class="section5_list_contentFooter">
-                            <time>2021/06/20</time>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="section5_list_content">
-                        <div class="section5_list_contentHeader">
-                            <img alt="圖片" src="./img/home-section5-2.png">
-                            <h3>凱倫</h3>
-                        </div>
-                        <div class="section5_list_contentBody">
-                            <p>眼鏡品質優良，下次還會想來這邊購買！</p>
-                        </div>
-                        <div class="section5_list_contentFooter">
-                            <time>2021/04/18</time>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="section5_list_content">
-                        <div class="section5_list_contentHeader">
-                            <img alt="圖片" src="./img/home-section5-3.png">
-                            <h3>悠悠</h3>
-                        </div>
-                        <div class="section5_list_contentBody">
-                            <p>謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
-                        </div>
-                        <div class="section5_list_contentFooter">
-                            <time>2020/12/25</time>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="section5_list_content">
-                        <div class="section5_list_contentHeader">
-                            <img alt="圖片" src="./img/home-section5-4.png">
-                            <h3>Kyuan</h3>
-                        </div>
-                        <div class="section5_list_contentBody">
-                            <p>服務很好，品質沒有任何問題，非常喜歡。</p>
-                        </div>
-                        <div class="section5_list_contentFooter">
-                            <time>2020/10/31</time>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-    </section>
-
-    <section class="main_section6">
-
-        <div class="container">
-            <h2 class="main_setion6_title">聯絡我們</h2>
-            <form class="main_setion6_form">
-                <p class="section6_form_text">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
-                <label for="fname" class="form__label">姓名</label>
-                <input type="text" class="form__input" id="fname" name="fname" placeholder="陳小明">
-
-                <label for="fphone" class="form__label">連絡電話</label>
-                <input type="tel" class="form__input" id="fphone" name="fphone" placeholder="0912-345-678">
-
-                <label for="femail" class="form__label">電子郵件</label>
-                <input type="email" class="form__input" id="femail" name="femail" placeholder="example@email.com">
+                    <ul class="footer_list_right">
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic-social-fb.png"></a>
+                        </li>
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic_social_ig.png"></a>
+                        </li>
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic_social_line.png"></a>
+                        </li>
+                    </ul>
+    
+                <!-- </div> -->
+                <!-- <div class="footer_contact"> -->
+                    <ul class="footer_contact_list">
+                        <li class="footer_contact_listItem"><span class="material-icons-outlined">phone</span>0800-000-00</li>
+                        <li class="footer_contact_listItem"><span class="material-icons-outlined">email</span>glasses@business.co</li>
+                    </ul>
+                <!-- </div> -->
+    
                 
-                <label for="ftext" class="form__label">意見反應</label>
-                <textarea id="ftext" name="ftext" class="form__text"  placeholder="請輸入您的意見"></textarea>
-            </form>
+            </section>
+            <div class="footer_horizontal"></div>
+
+            <section class="footer_section2">
+                <div>
+                    <p class="footer_copyright">Copyright © 2020 Glasses.All rights reserved.</p>
+                </div>
+                <ul class="footer_termsList">
+                    <li><a href="#">隱私權政策</a></li>
+                    <li><a href="#">服務條款</a></li>
+                </ul>
+            </section>
+            <!-- <div class="footer_list">
+                <ul class="footer_list_left">
+                    <li class="footer_list_leftItem"><a href="">首頁</a></li>
+                    <li class="footer_list_leftItem"><a href="">系列鏡框</a></li>
+                    <li class="footer_list_leftItem"><a href="">門市據點</a></li>
+                    <li class="footer_list_leftItem"><a href="">部落格</a></li>
+                    <li class="footer_list_leftItem"><a href="">常見問題</a></li>
+                </ul>
+
+                <ul class="footer_list_right">
+                    <li class="footer_list_rightItem">
+                        <a href=""><img src="./img/ic-social-fb.png"></a>
+                    </li>
+                    <li class="footer_list_rightItem">
+                        <a href=""><img src="./img/ic_social_ig.png"></a>
+                    </li>
+                    <li class="footer_list_rightItem">
+                        <a href=""><img src="./img/ic_social_line.png"></a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="footer_contact">
+                <ul class="footer_contact_list">
+                    <li class="footer_contact_listItem"><span class="material-icons-outlined">phone</span>0800-000-00</li>
+                    <li class="footer_contact_listItem"><span class="material-icons-outlined">email</span>glasses@business.co</li>
+                </ul>
+            </div> -->
 
         </div>
 
-    </section>
-
-   </main>
-
+    </footer>
 </body>
 </html>
