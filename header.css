@@ -10,10 +10,15 @@
 .header_imgbox{
     padding: 16px 0px;
 }
-.header_imgbox img{
+.header_imgbox > a{
+    display: inline-block;
     width: 80px;
     height: 48px;
 }
+/* .header_imgbox img{
+    width: 80px;
+    height: 48px;
+} */
 .header_listbox{
     margin-left: auto;
 }
