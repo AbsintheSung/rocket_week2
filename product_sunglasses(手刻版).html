@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
     <style>
-       
+        .product_container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .product_width{
+            width: 100%;
+        }
+        .main_container{
+            width:100%
+        }
         .product_link{
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -141,7 +151,9 @@
             background-color: #000000;
         }
 
-      
+        footer{
+            margin-top: auto;
+        }
         @media (max-width: 1200px) {
             .container{
                 max-width: 1200px;
@@ -157,7 +169,7 @@
             .container{
                 max-width: 768px;
             }
-            .product_link_pad{
+            .product_width{
                 padding-right:0px ;
                 padding-left: 0px;
             }  
@@ -216,6 +228,7 @@
     </style>
 </head>
 <body>
+    <div class="product_container">
     <!-- header -->
     <header class="container-fluid header_background">
         <div class="container header header-pad">
@@ -233,7 +246,7 @@
         </div>
     </header>
 
-    <section class="container product_link_pad">
+    <section class="container product_width">
         <ul class="product_link ">
             <li><a href="#">OPTICAL</a></li>
             <li><a href="#">SUNGLASSES</a></li>
@@ -349,7 +362,7 @@
         </div>
 
     </footer>
-    
+</div>
     <script>
         const productUl = document.querySelector('.main_productList')
         const fragment = document.createDocumentFragment()
