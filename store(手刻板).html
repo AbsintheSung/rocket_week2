@@ -16,6 +16,7 @@
         }
         .select_area{
             margin-top: 32px;
+            margin-bottom: 40px;
             display: flex;
         }
         .select_area > label {
@@ -109,6 +110,9 @@
             #store_area{
                 width: 75%;
             }
+            .select_area{
+                margin: 24px 0px;
+            }
             .select_area > label {
                 font-size: 16px;
                 margin-right: 8px;
@@ -145,7 +149,7 @@
             </div>
 
             <ul class="store_list">
-                <li>
+                <!-- <li>
                     <div class="storelist_content">
                         <div class="storelist_content_header">
                             <img src="./img/store-1.png">
@@ -202,7 +206,7 @@
                             <a href="#" class="store_link">詳細資訊</a>
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
             
            
@@ -214,7 +218,152 @@
     <!-- footer -->
 
     <script>
-        
+        const storeList = document.querySelector('.store_list')
+        const fragment = document.createDocumentFragment()
+        let data = [
+            {
+                id:1,
+                img:'./img/store-1.png',
+                title:'台北中山旗艦店',
+                phone:'電話：(02)000-1234',
+                business:'營業時間：10:00-21:00',
+                location:'地址：台北市中山區南京東路25巷2-1號'
+            },
+            {
+                id:1,
+                img:'./img/store-2.png',
+                title:'台北綠園店',
+                phone:'電話：(02)000-2345',
+                business:'營業時間：10:00-21:00',
+                location:'地址：台北市中正區復興南路 132-1 號'
+            },
+            {
+                id:1,
+                img:'./img/store-3.png',
+                title:'台中清水旗艦店',
+                phone:'電話：(02)000-1234',
+                business:'營業時間：10:00-21:00',
+                location:'地址：台中市清水區經南一路 23 號 8 樓'
+            },
+            {
+                id:1,
+                img:'./img/store-4.png',
+                title:'高雄中正形象店',
+                phone:'電話：(07)000-2345',
+                business:'營業時間：10:00-21:00',
+                location:'地址：高雄市苓雅區中正路 38 號 12 樓'
+            },
+            {
+                id:1,
+                img:'./img/store-5.png',
+                title:'高雄夢時代店',
+                phone:'電話：(07)000-1234',
+                business:'營業時間：10:00-21:00',
+                location:'地址：高雄市前鎮區中華一路 63 號 6 樓'
+            },
+        ]
+        function createImg(imgurl){
+            let img = new Image();
+            // img.src = './img/store-1.png'
+            img.src = imgurl;
+            img.alt = "活動圖片"
+            return img
+        }
+        function createStoreListHeader(imgurl){
+            let div = document.createElement('div')
+            let img = createImg(imgurl)
+            div.classList.add('storelist_content_header')
+            div.appendChild(img)
+            return div
+        }
+        function createStoreListConnectionLi1(phone){
+            let li = document.createElement('li')
+            let span = document.createElement('span')
+            let phoneNumberText = document.createTextNode(`${phone}`);
+            span.classList.add('material-icons-outlined')
+            span.textContent = 'call'
+            li.appendChild(span)
+            li.appendChild(phoneNumberText)
+            return li
+        }
+        function createStoreListConnectionLi2(business){
+            let li = document.createElement('li')
+            let span = document.createElement('span')
+            let phoneNumberText = document.createTextNode(`${business}`);
+            span.classList.add('material-icons-outlined')
+            span.textContent = 'schedule'
+            li.appendChild(span)
+            li.appendChild(phoneNumberText)
+            return li
+        }
+        function createStoreListConnectionLi3(location){
+            let li = document.createElement('li')
+            let span = document.createElement('span')
+            let phoneNumberText = document.createTextNode(`${location}`);
+            span.classList.add('material-icons-outlined')
+            span.textContent = 'location_on'
+            li.appendChild(span)
+            li.appendChild(phoneNumberText)
+            return li
+        }
+        function createStoreListConnection(dataObj){
+            let ul = document.createElement('ul')
+            let li1 = createStoreListConnectionLi1(dataObj.phone)
+            let li2 = createStoreListConnectionLi2(dataObj.business)
+            let li3 = createStoreListConnectionLi3(dataObj.location)
+            ul.classList.add('storelist_connection')
+            
+            ul.appendChild(li1)
+            ul.appendChild(li2)
+            ul.appendChild(li3)
+            return ul
+        }
+        function createStoreListBody(dataObj){
+            let div = document.createElement('div');
+            let h3 = document.createElement('h3');
+            let ul = createStoreListConnection(dataObj)
+            div.classList.add('storelist_content_body')
+            h3.textContent = `${dataObj.title}`;
+            div.appendChild(h3)
+            div.appendChild(ul)
+           
+            return div
+        }
+
+        function createStoreFooter(){
+            let div = document.createElement('div')
+            let a_link = document.createElement('a')
+            div.classList.add('storelist_content_footer')
+            a_link.href="#"
+            a_link.classList.add('store_link')
+            a_link.textContent = '詳細資訊'
+            div.appendChild(a_link);
+            return div
+        }
+        function createStoreListContent(dataObj){
+            let div = document.createElement('div')
+            let header = createStoreListHeader(dataObj.img);
+            let body = createStoreListBody(dataObj);
+            let footer = createStoreFooter();
+            div.classList.add('storelist_content')
+            div.appendChild(header);
+            div.appendChild(body);
+            div.appendChild(footer)
+            return div
+        }
+        function createLi(dataObj){
+            let li = document.createElement('li')
+            let content = createStoreListContent(dataObj)
+            li.appendChild(content)
+            return li
+        }
+
+        function mountStoreList(){
+            data.forEach(item=> storeList.appendChild(createLi(item)))
+        }
+        mountStoreList()
+
+
     </script>
 </body>
 </html>
