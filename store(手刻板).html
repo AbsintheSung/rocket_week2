@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+    <style>
+        .h1{
+            font-size: 48px;
+            font-weight: bold;
+            padding-left: 16px;
+            border-left: 8px solid var(--primary);
+        }
+        .select_area{
+            margin-top: 32px;
+            display: flex;
+        }
+        .select_area > label {
+            font-size: 24px;
+            margin-right: 16px;
+        }
+        #store_area{
+            width: 25%;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 12px;
+        }
+        #store_area > option{
+            font-size: 18px;
+        } 
+
+        .store_list{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 24px;
+            grid-row-gap: 24px;
+        }
+        .storelist_content_header > img{
+            height: 224px;
+        }
+        .storelist_content_body{
+            padding: 0px 24px;
+        }
+        .storelist_content_body > h3{
+            margin-top: 8px;
+            margin-bottom: 24px;
+            font-size: 20px;
+        }
+        .storelist_connection{
+            font-size: 20px;
+        }
+        .storelist_connection > li{
+            display: flex;
+            align-items: start;
+        }
+        .storelist_connection > li:nth-child(2){
+            margin: 8px 0px;
+        }
+        .storelist_connection > li >span{
+            padding: 3px;
+            margin-right: 12px;
+        }
+        .storelist_content_footer{
+            margin-top: 16px;
+        }
+        .store_link{
+            display: block;
+            text-align: center;
+            font-size: 19px;
+            background-color: #000000;
+            color:#FFFFFF;
+            padding: 16px 0px;
+        }
+        @media (max-width: 1200px) {
+            .container{
+                max-width: 1200px;
+            }
+
+        }
+        @media (max-width: 992px) {
+            .container{
+                max-width: 992px;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .container{
+                max-width: 768px;
+            }
+            #store_area{
+                width: 40%;
+            }
+            .store_list{
+                grid-template-columns: repeat(2,1fr);
+            }
+            
+        }
+        @media (max-width: 576px) {
+            .container{
+                max-width: 576px;
+            }
+            .h1{
+                font-size: 24px;
+            }
+            #store_area{
+                width: 75%;
+            }
+            .select_area > label {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+            .store_list{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .container{
+                max-width: 375px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+
+    <div class="container">
+
+        <h1 class="h1">門市據點</h1>
+    
+        <main>
+            <div class="select_area">
+                <label>選擇地區</label>
+                <select name="store_area" id="store_area">
+                    <option value="" disabled selected hidden>請選擇門市地區</option>
+                    <option value="台北">台北</option>
+                    <option value="台中">台中</option>
+                    <option value="高雄">高雄</option>
+                </select>
+            </div>
+
+            <ul class="store_list">
+                <li>
+                    <div class="storelist_content">
+                        <div class="storelist_content_header">
+                            <img src="./img/store-1.png">
+                        </div>
+                        <div class="storelist_content_body">
+                            <h3>台北中山旗艦店</h3>
+                            <ul class="storelist_connection">
+                                <li><span class="material-icons-outlined">call</span>電話：(02)000-1234</li>
+                                <li><span class="material-icons-outlined">schedule</span>營業時間：10:00-21:00</li>
+                                <li><span class="material-icons-outlined">location_on</span>地址：台北市中山區南京東路25巷2-1號</li>
+                            </ul>
+            
+                        </div>
+                        <div class="storelist_content_footer">
+                            <a href="#" class="store_link">詳細資訊</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="storelist_content">
+                        <div class="storelist_content_header">
+                            <img src="./img/store-1.png">
+                        </div>
+                        <div class="storelist_content_body">
+                            <h3>台北中山旗艦店</h3>
+                            <ul class="storelist_connection">
+                                <li><span class="material-icons-outlined">call</span>電話：(02)000-1234</li>
+                                <li><span class="material-icons-outlined">schedule</span>營業時間：10:00-21:00</li>
+                                <li><span class="material-icons-outlined">location_on</span>地址：台北市中山區南京東路25巷2-1號</li>
+                            </ul>
+                        </div>
+                        <div class="storelist_content_footer">
+                            <a href="#" class="store_link">詳細資訊</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="storelist_content">
+                        <div class="storelist_content_header">
+                            <img src="./img/store-1.png">
+                        </div>
+                        <div class="storelist_content_body">
+                            <h3>台北中山旗艦店</h3>
+                            <ul class="storelist_connection">
+                                <li><span class="material-icons-outlined">call</span>電話：(02)000-1234</li>
+                                <li><span class="material-icons-outlined">schedule</span>營業時間：10:00-21:00</li>
+                                <li><span class="material-icons-outlined">location_on</span>地址：台北市中山區南京東路25巷2-1號</li>
+                            </ul>
+            
+                        </div>
+                        <div class="storelist_content_footer">
+                            <a href="#" class="store_link">詳細資訊</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+           
+        </main>
+
+    </div>
+  
+
+    <!-- footer -->
+
+    <script>
+        
+    </script>
+</body>
+</html>
