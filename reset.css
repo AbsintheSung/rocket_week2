@@ -9,6 +9,7 @@
 	--chinessFontStyle:"Noto Sans TC", sans-serif;
 	--englishFontStyle: "Roboto", sans-serif;
 }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -63,5 +64,14 @@ img{
 }
 a{
 	text-decoration: none;
+}
+
+.container-fluid{
+	width: 100%;
+}
+.container{
+	max-width: 1320px; /* 1296 + 12 + 12 */
+	margin: 0 auto;
+	padding: 0px 12px;
 }
 
