@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./font.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
     <style>
+        .store_page{
+            padding-top: 96px;
+            padding-bottom: 80px;
+        }
         .h1{
             font-size: 48px;
             font-weight: bold;
@@ -120,6 +124,10 @@
             .store_list{
                 grid-template-columns: repeat(1,1fr);
             }
+            .store_page{
+                padding-top: 40px;
+                padding-bottom: 64px;
+            }
         }
         
         @media (max-width: 375px) {
@@ -133,7 +141,7 @@
 <body>
     <!-- header -->
 
-    <div class="container">
+    <div class="container store_page">
 
         <h1 class="h1">門市據點</h1>
     
@@ -149,6 +157,7 @@
             </div>
 
             <ul class="store_list">
+
                 <!-- <li>
                     <div class="storelist_content">
                         <div class="storelist_content_header">
@@ -167,46 +176,9 @@
                             <a href="#" class="store_link">詳細資訊</a>
                         </div>
                     </div>
-                </li>
-
-                <li>
-                    <div class="storelist_content">
-                        <div class="storelist_content_header">
-                            <img src="./img/store-1.png">
-                        </div>
-                        <div class="storelist_content_body">
-                            <h3>台北中山旗艦店</h3>
-                            <ul class="storelist_connection">
-                                <li><span class="material-icons-outlined">call</span>電話：(02)000-1234</li>
-                                <li><span class="material-icons-outlined">schedule</span>營業時間：10:00-21:00</li>
-                                <li><span class="material-icons-outlined">location_on</span>地址：台北市中山區南京東路25巷2-1號</li>
-                            </ul>
-                        </div>
-                        <div class="storelist_content_footer">
-                            <a href="#" class="store_link">詳細資訊</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="storelist_content">
-                        <div class="storelist_content_header">
-                            <img src="./img/store-1.png">
-                        </div>
-                        <div class="storelist_content_body">
-                            <h3>台北中山旗艦店</h3>
-                            <ul class="storelist_connection">
-                                <li><span class="material-icons-outlined">call</span>電話：(02)000-1234</li>
-                                <li><span class="material-icons-outlined">schedule</span>營業時間：10:00-21:00</li>
-                                <li><span class="material-icons-outlined">location_on</span>地址：台北市中山區南京東路25巷2-1號</li>
-                            </ul>
-            
-                        </div>
-                        <div class="storelist_content_footer">
-                            <a href="#" class="store_link">詳細資訊</a>
-                        </div>
-                    </div>
                 </li> -->
+
+          
             </ul>
             
            
@@ -230,7 +202,7 @@
                 location:'地址：台北市中山區南京東路25巷2-1號'
             },
             {
-                id:1,
+                id:2,
                 img:'./img/store-2.png',
                 title:'台北綠園店',
                 phone:'電話：(02)000-2345',
@@ -238,7 +210,7 @@
                 location:'地址：台北市中正區復興南路 132-1 號'
             },
             {
-                id:1,
+                id:3,
                 img:'./img/store-3.png',
                 title:'台中清水旗艦店',
                 phone:'電話：(02)000-1234',
@@ -246,7 +218,7 @@
                 location:'地址：台中市清水區經南一路 23 號 8 樓'
             },
             {
-                id:1,
+                id:4,
                 img:'./img/store-4.png',
                 title:'高雄中正形象店',
                 phone:'電話：(07)000-2345',
@@ -254,7 +226,7 @@
                 location:'地址：高雄市苓雅區中正路 38 號 12 樓'
             },
             {
-                id:1,
+                id:5,
                 img:'./img/store-5.png',
                 title:'高雄夢時代店',
                 phone:'電話：(07)000-1234',
