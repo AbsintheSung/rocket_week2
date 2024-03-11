@@ -78,6 +78,7 @@
             flex-direction: column;
         }
         .productList_header > img{
+            width: 100%;
             height: 168px;
         }
         .productList_body{
@@ -134,6 +135,10 @@
             .product_viewImg:last-child{
                 background-image: url("./img/product-header-sm-2.png");
             }
+            .main_productList{
+                grid-template-columns: repeat(2,1fr);
+                grid-row-gap: 40px;
+            }
         }
         @media (max-width: 576px) {
             .container{
@@ -152,6 +157,10 @@
             .main_container{
                 padding-top: 40px;
                 padding-bottom: 40px;
+            }
+            .main_productList{
+                grid-template-columns: repeat(1,1fr);
+                grid-row-gap: 24px;
             }
         }
         @media (max-width: 375px) {
@@ -183,7 +192,7 @@
                 <span>賽璐珞鈦金屬混合鏡框</span>
             </h1>
             <ul class="main_productList">
-                <li>
+                <!-- <li>
                     <div class="productList_content">
                         <div class="productList_header">
                             <img alt="產品圖片" src='./img/product-1.png'>
@@ -213,7 +222,7 @@
                             <a href="#"></a>
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </main>
         
@@ -227,19 +236,89 @@
         const fragment = document.createDocumentFragment()
         let data = [
             {
-                id:''
+                id:1,
+                title:'',
+                img:'./img/product-1.png',
+                a1_link:'',
+                a2_link:''
             },
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
+            {
+                id:1,
+                title:'',
+                img:'./img/product-2.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-3.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-4.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-5.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-6.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-1.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-2.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-3.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-4.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-5.png',
+                a1_link:'',
+                a2_link:''
+            },
+            {
+                id:1,
+                title:'',
+                img:'./img/product-6.png',
+                a1_link:'',
+                a2_link:''
+            },
         ]
         function createImg(imgurl){
             let img = new Image();
@@ -297,11 +376,11 @@
         }
         function mountUl(){
             for(let i=0;i<data.length;i++){
-                fragment.appendChild(createCardLi('./img/product-2.png'))
+                fragment.appendChild(createCardLi(data[i].img))
             }
             productUl.appendChild(fragment)
         }
-        productUl.appendChild(createCardLi('./img/product-2.png'))
+        mountUl()
     </script>
 </body>
 </html>
