@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+/* 以下設定有些許更改，請到上述的網址去copy一份新的 */
 :root{
 	--primary:#AA0601;
 	--secondary:#FBF2F2;
@@ -37,7 +39,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1.5;
-	font-family: var(--chinessFontStyle)
+	font-family: var(--chinessFontStyle);
+	/* min-height: 100vh; */
 }
 ol, ul {
 	list-style: none;

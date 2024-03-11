@@ -1,0 +1,94 @@
+.store_page{
+    /*  在 store_ information(手刻版)，因為內容不夠長， 導致 footer不能完全置底
+        所以在  store_ information(手刻版) 全局用 一個樣式如下:
+
+        .container_store{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        但會導致 原本 container 的 width改變 要維持原有的 需給予 width100%
+        然後 footer 下 margin-top: auto; 即可 內容不夠長 但 footer 可以完全置底
+
+    */
+    width: 100%; 
+    padding-top: 96px;
+    padding-bottom: 80px;
+}
+.h1{
+    font-size: 48px;
+    font-weight: bold;
+    padding-left: 16px;
+    border-left: 8px solid var(--primary);
+}
+.select_area{
+    margin-top: 32px;
+    margin-bottom: 40px;
+    display: flex;
+}
+.select_area > label {
+    font-size: 24px;
+    margin-right: 16px;
+}
+#store_area{
+    width: 25%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+}
+#store_area > option{
+    font-size: 18px;
+} 
+
+@media (max-width: 1200px) {
+    .container{
+        max-width: 1200px;
+    }
+
+}
+@media (max-width: 992px) {
+    .container{
+        max-width: 992px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 768px;
+    }
+    #store_area{
+        width: 40%;
+    }
+ 
+    
+}
+@media (max-width: 576px) {
+    .container{
+        max-width: 576px;
+    }
+    .store_page{
+        padding-top: 40px;
+        padding-bottom: 64px;
+    }
+    .h1{
+        font-size: 24px;
+    }
+    #store_area{
+        width: 75%;
+    }
+    .select_area{
+        margin: 24px 0px;
+    }
+    .select_area > label {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container{
+        max-width: 375px;
+    }
+    
+}
