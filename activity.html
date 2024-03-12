@@ -21,29 +21,72 @@
             padding-top: 24px;
             padding-bottom: 80px;
         }
+ 
+        .activity_nav_bg{
+            background-color: #650300;
+        }
+        .activity_nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .activity_nav_List{
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .activity_nav_List > li{
+            padding: 17px 0px;
+        }
+        .activity_nav_List > li > a{
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+        .activity_nav_List > li > a:hover{
+            text-decoration: underline;
+        }
+        .activity_nav_List > li:not(:last-child){
+            margin-right: 48px;
+        }
+        .activity_nav_search > span{
+           font-size: 40px;
+           color:#FFFFFF;
+        }
+
         .activity_linkList{
             display: flex;
         }
         .activity_linkList > li:not(:last-child)::after {
             content: "/";
-            font-size: 24px;
-            margin-left: 5px; 
-            margin-right: 5px; 
+            font-size: 16px;
+            margin-left: 2px; 
+            margin-right: 2px; 
             color: #000; 
         }
         .activity_linkList > li > a{
-            font-size: 24px;
+            font-size: 16px;
+            color: #000;
+        }
+        .activity_linkList > li > a:hover{
+            text-decoration: underline;
+            color:var(--primary)
+        }
+        .activity_linkList > li:last-child>a{
+            color: var(--primary);
         }
         .activity_mark{
             margin: 8px 0px;
         }
-        .activity_mark > span{
+        .activity_mark >a> span{
             font-weight: bold;
             font-size: 24px;
             color: #AA0601;
         }
-        .activity_mark > span:not(:first-child){
+        .activity_mark > a:not(:first-child) > span{
             margin-left: 16px;
+        }
+        .activity_mark >a> span:hover{
+            text-decoration: underline;
         }
         .main_activity{
             display: flex;
@@ -80,17 +123,24 @@
             font-weight: bold;
             font-size: 32px;
             color: var(--primary);
+            margin-bottom: 4px;
         }
         .main_activity_mark > h2 >span{
             margin-right: 12px;
             font-size: 32px;
         }
-        .main_activity_mark > p > span{
+        .main_activity_mark > p{
+            margin-bottom: 4px;
+        }
+        .main_activity_mark > p > a > span {
             font-size: 24px;
             font-weight: bold;
             color: var(--primary);
         }
-        .main_activity_mark > p > span:first-child{
+        .main_activity_mark > p > a > span:hover{
+            text-decoration: underline;
+        }
+        .main_activity_mark > p >a > span:first-child{
             margin-right: 24px;
         }
 
@@ -110,6 +160,38 @@
         .sharebox_list >li{
             margin-right: 16px;
         }
+        .sharebox_list >li > a{
+            display: inline-block;
+        }
+        .sharebox_list >li > a > img{
+            width: 24px;
+            height: 24px;
+        }
+        .activity_mainfooter_line{
+            height: 1px;
+            background-color: #707070;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        .activity_mainfooter_link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .activity_mainfooter_link > p >a{
+            display: flex;
+            align-items: center;
+            color: #000;
+        }
+        .activity_mainfooter_link > p:first-child > a > span{
+            margin-right: 12px;
+        }
+        .activity_mainfooter_link > p:last-child > a > span{
+            margin-left: 12px;
+        }
+        .activity_mainfooter_link > p >a:hover{
+            color: var(--primary);
+        }
 
         @media (max-width: 1200px) {
             .container{
@@ -124,6 +206,9 @@
             .main_activity_mark > p:nth-child(3){
                 display: flex;
                 flex-direction: column;
+            }
+            .main_activity_mark > p:nth-child(3) > a:first-child{
+                margin-bottom: 4px;
             }
         }
 
@@ -151,7 +236,7 @@
                 width: 25%;
             }
         
-            .main_activity_mark > p > span{
+            .main_activity_mark > p > a >span{
                 font-size: 16px;
                 font-weight: bold;
                 color: var(--primary);
@@ -165,14 +250,30 @@
                 padding-top: 16px;
                 padding-bottom: 64px;
             }
+            .activity_nav_List{
+                width: 100%;
+                justify-content: space-between;
+            }
+            .activity_nav_List > li > a{
+                font-size: 16px;
+            }
+            .activity_nav_List > li:not(:last-child){
+                margin-right: 0px;
+            }
+            .activity_nav_search{
+                display: none;
+            }
             .cardContent_header > img{
                 height: 208px;
             }
             .activity_cardBox{
                 width: 100%;
             }
-            .activity_cardBox >p{
+            .activity_cardBox >h2{
                 font-size: 24px;
+            }
+            .activity_cardBox >p{
+                font-size: 16px;
                 margin-bottom: 16px;
             }
             .main_activity_mark{
@@ -181,6 +282,10 @@
             .cardContent_body{
                 margin-bottom: 16px;
             }
+            .activity_mainfooter{
+                display: none;
+            }
+            
 
         }
         @media (max-width: 375px) {
@@ -189,6 +294,7 @@
             }
             
         }
+       
     </style>
 </head>
 <body>
@@ -196,6 +302,38 @@
     <div class="activity_pages">
 
         <!-- header -->
+        <header class="container-fluid header_background">
+            <div class="container header header-pad">
+                <div class="header_imgbox">
+                    <a href="./index.html">
+                        <img alt="公司logo" src="./img/logo-white.png">
+                    </a>
+                </div>
+                <nav class="header_listbox">
+                    <ul class="header_list">
+                        <li class="header_list_item "><a href="./product_optical.html">系列鏡框</a></li>
+                        <li class="header_list_item"><a href="./store.html">門市據點</a></li>
+                        <li class="header_list_item"><a href="#">部落格</a></li>
+                        <li class="header_list_item"><a href="./question.html">常見問題</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <div class="container-fluid activity_nav_bg">
+            <div class="container activity_nav">
+                <ul class="activity_nav_List">
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">特別企劃</a></li>
+                    <li><a href="#">新品上市</a></li>
+                    <li><a href="#">鏡框小知識</a></li>
+                </ul>
+                <div class="activity_nav_search">
+                    <span class="material-icons-outlined">search</span>
+                </div>
+            </div>
+        </div>
 
         <main class="container activity_container">
             <ul class="activity_linkList">
@@ -205,8 +343,8 @@
                 <li><a href="#">情人節特別企劃</a></li>
             </ul>
             <div class="activity_mark">
-                <span>#special</span>
-                <span>#event</span>
+                <a href="#"><span>#special</span></a>
+                <a href="#"><span>#event</span></a>
             </div>
             <div class="main_activity">
                 <div class="activity_cardBox">
@@ -270,10 +408,10 @@
                 </div>
                 <div class="main_activity_mark">
                     <h2><span class="material-icons-outlined">label</span>TAGS</h2>
-                    <p><span>#special</span><span>#sale</span></p>
-                    <p><span>#new_item</span><span>#interview</span></p>
-                    <p><span>#trivia</span><span>#news</span></p>
-                    <p><span>#news</span></p>
+                    <p><a href="#"><span>#special</span></a><a href="#"><span>#sale</span></a></p>
+                    <p><a href="#"><span>#new_item</span></a><a href="#"><span>#interview</span></a></p>
+                    <p><a href="#"><span>#trivia</span></a><a href="#"><span>#news</span></a></p>
+                    <p><a href="#"><span>#news</span></a></p>
                 </div>
             </div>
 
@@ -286,14 +424,66 @@
                     </ul>
                 </div >
 
-                <div></div>
+                <div class="activity_mainfooter_line"></div>
+
+                <div class="activity_mainfooter_link">
+                    <p><a href="#"><span class="material-icons-outlined">arrow_back</span>上一篇：街頭潮人訪問 1</a></p>
+                    <p><a href="#">下一篇：街頭潮人訪問 2<span class="material-icons-outlined">arrow_forward</span></a></p>
+                </div>
 
             </div>
 
         </main>
-
+        
 
         <!-- footer -->
+        <footer class="container-fluid footer_background">
+
+            <div class="container footer_container">
+                <section class="footer_section1">
+    
+                    <!-- <div class="footer_list"> -->
+                        <ul class="footer_list_left">
+                            <li class="footer_list_leftItem"><a href="./index.html">首頁</a></li>
+                            <li class="footer_list_leftItem"><a href="./product_optical.html">系列鏡框</a></li>
+                            <li class="footer_list_leftItem"><a href="./store.html">門市據點</a></li>
+                            <li class="footer_list_leftItem"><a href="">部落格</a></li>
+                            <li class="footer_list_leftItem"><a href="./question.html">常見問題</a></li>
+                        </ul>
+        
+                    <ul class="footer_list_right">
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic-social-fb.png"></a>
+                        </li>
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic_social_ig.png"></a>
+                        </li>
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic_social_line.png"></a>
+                        </li>
+                    </ul>
+    
+                    <ul class="footer_contact_list">
+                        <li class="footer_contact_listItem"><span class="material-icons-outlined footer_icon">phone</span>0800-000-00</li>
+                        <li class="footer_contact_listItem"><span class="material-icons-outlined footer_icon">email</span>glasses@business.co</li>
+                    </ul>
+    
+                </section>
+                <div class="footer_horizontal"></div>
+    
+                <section class="footer_section2">
+                    <div>
+                        <p class="footer_copyright">Copyright © 2020 Glasses.All rights reserved.</p>
+                    </div>
+                    <ul class="footer_termsList">
+                        <li><a href="#">隱私權政策</a></li>
+                        <li><a href="#">服務條款</a></li>
+                    </ul>
+                </section>
+    
+            </div>
+    
+        </footer>
 
     </div>
 
