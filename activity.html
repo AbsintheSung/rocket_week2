@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+    <style>
+         .activity_pages{
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .activity_container{
+            width: 100%;
+            padding-top: 24px;
+            padding-bottom: 80px;
+        }
+        .activity_linkList{
+            display: flex;
+        }
+        .activity_linkList > li:not(:last-child)::after {
+            content: "/";
+            font-size: 24px;
+            margin-left: 5px; 
+            margin-right: 5px; 
+            color: #000; 
+        }
+        .activity_linkList > li > a{
+            font-size: 24px;
+        }
+        .activity_mark{
+            margin: 8px 0px;
+        }
+        .activity_mark > span{
+            font-weight: bold;
+            font-size: 24px;
+            color: #AA0601;
+        }
+        .activity_mark > span:not(:first-child){
+            margin-left: 16px;
+        }
+        .main_activity{
+            display: flex;
+        }
+
+        .activity_cardBox{
+            width: 66%;
+            margin-right: 12px;
+        }
+        .activity_cardBox >h2{
+            font-size: 48px;
+        }
+        .activity_cardBox >p{
+            font-size: 24px;
+            font-weight: 500;
+            font-family: var(--englishFontStyle);
+            margin-bottom: 16px;
+        }
+        .cardContent_header > img{
+            width: 100%;
+            height: 520px;
+        }
+        .cardContent_body{
+            margin-top: 8px;
+            margin-bottom: 40px;
+        }
+        .main_activity_mark{
+            margin-left:12px ;
+            width: 34%;
+        }
+        .main_activity_mark > h2{
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 32px;
+            color: var(--primary);
+        }
+        .main_activity_mark > h2 >span{
+            margin-right: 12px;
+            font-size: 32px;
+        }
+        .main_activity_mark > p > span{
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .main_activity_mark > p > span:first-child{
+            margin-right: 24px;
+        }
+
+        @media (max-width: 1200px) {
+            .container{
+                max-width: 1200px;
+            }
+
+        }
+        @media (max-width: 992px) {
+            .container{
+                max-width: 992px;
+            }
+            .main_activity_mark > p:nth-child(3){
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container{
+                max-width: 768px;
+            }
+            .activity_container{
+                padding-top: 8px;
+            }
+            .activity_cardBox{
+                width: 75%;
+            }
+            .activity_cardBox >p{
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
+            .cardContent_header > img{
+                height: 312px;
+            }
+            .cardContent_body{
+                margin-bottom: 24px;
+            }
+            .main_activity_mark{
+                width: 25%;
+            }
+        
+            .main_activity_mark > p > span{
+                font-size: 16px;
+                font-weight: bold;
+                color: var(--primary);
+            }
+        }
+        @media (max-width: 576px) {
+            .container{
+                max-width: 576px;
+            }
+            .activity_container{
+                padding-top: 16px;
+                padding-bottom: 64px;
+            }
+            .cardContent_header > img{
+                height: 208px;
+            }
+            .activity_cardBox{
+                width: 100%;
+            }
+            .activity_cardBox >p{
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+            .main_activity_mark{
+                display: none;
+            }
+            .cardContent_body{
+                margin-bottom: 16px;
+            }
+
+        }
+        @media (max-width: 375px) {
+            .container{
+                max-width: 375px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="activity_pages">
+
+        <!-- header -->
+
+        <main class="container activity_container">
+            <ul class="activity_linkList">
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">部落格</a></li>
+                <li><a href="#">特別企劃</a></li>
+                <li><a href="#">情人節特別企劃</a></li>
+            </ul>
+            <div class="activity_mark">
+                <span>#special</span>
+                <span>#event</span>
+            </div>
+            <div class="main_activity">
+                <div class="activity_cardBox">
+                    <h2>情人特別企劃</h2>
+                    <p>2020 Valentine’s Special</p>
+                    <ul class="activity_cardList">
+                        <li class="activity_cardItem">
+
+                            <div class="activity_cardContent">
+                                <div class="cardContent_header">
+                                    <img alt="活動圖片"  src="./img/blogpage-1.png">
+                                </div>
+                                <div class="cardContent_body">
+                                    <p>一年一度西洋情人節即將到來，我們推出最強「情人節企劃」，為這個甜蜜的節日加溫。<br> 本次拍攝的鏡框款式與 NEEDS CLASSIC 聯名設計款，偶爾跟另一半來個低調情侶單品，結合彼此喜好、找出合適框型款式，在這個春夏輕鬆搭出屬於你們的甜蜜默契！</p>
+                                </div>
+                            </div>
+                            
+                        </li>
+
+                        <li class="activity_cardItem">
+
+                            <div class="activity_cardContent">
+                                <div class="cardContent_header">
+                                    <img alt="活動圖片"  src="./img/blogpage-2.png">
+                                </div>
+                                <div class="cardContent_body">
+                                    <p>一年一度西洋情人節即將到來，我們推出最強「情人節企劃」，為這個甜蜜的節日加溫。<br> 本次拍攝的鏡框款式與 NEEDS CLASSIC 聯名設計款，偶爾跟另一半來個低調情侶單品，結合彼此喜好、找出合適框型款式，在這個春夏輕鬆搭出屬於你們的甜蜜默契！</p>
+                                </div>
+                            </div>
+                            
+                        </li>
+
+                        <li class="activity_cardItem">
+
+                            <div class="activity_cardContent">
+                                <div class="cardContent_header">
+                                    <img alt="活動圖片"  src="./img/blogpage-3.png">
+                                </div>
+                                <div class="cardContent_body">
+                                    <p>一年一度西洋情人節即將到來，我們推出最強「情人節企劃」，為這個甜蜜的節日加溫。<br> 本次拍攝的鏡框款式與 NEEDS CLASSIC 聯名設計款，偶爾跟另一半來個低調情侶單品，結合彼此喜好、找出合適框型款式，在這個春夏輕鬆搭出屬於你們的甜蜜默契！</p>
+                                </div>
+                            </div>
+                            
+                        </li>
+
+                        <li class="activity_cardItem">
+
+                            <div class="activity_cardContent">
+                                <div class="cardContent_header">
+                                    <img alt="活動圖片"  src="./img/blogpage-4.png">
+                                </div>
+                                <div class="cardContent_body">
+                                    <p>
+                                        2/14(五)-2/20(日) 至本店單筆消費滿2980元, 就送情人節限定眼鏡盒1個<br> 期間優惠還有~~持他牌鏡框更換鏡片<br> 薄型非球面鏡片折300元<br> 濾藍光鏡片折500元 <br>快快帶上另一半<br> 讓彼此每一次睜開眼，都被愛的視線包圍!
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="main_activity_mark">
+                    <h2><span class="material-icons-outlined">label</span>TAGS</h2>
+                    <p><span>#special</span><span>#sale</span></p>
+                    <p><span>#new_item</span><span>#interview</span></p>
+                    <p><span>#trivia</span><span>#news</span></p>
+                    <p><span>#news</span></p>
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+
+        </main>
+
+
+        <!-- footer -->
+
+    </div>
+
+
+</body>
+</html>
