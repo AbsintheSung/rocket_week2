@@ -94,6 +94,23 @@
             margin-right: 24px;
         }
 
+        .sharebox{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .sharebox >h3{
+            font-weight: bold;
+            font-family: var(--englishFontStyle);
+        }
+        .sharebox_list{
+            display: flex;
+            margin-left: 16px;
+        }
+        .sharebox_list >li{
+            margin-right: 16px;
+        }
+
         @media (max-width: 1200px) {
             .container{
                 max-width: 1200px;
@@ -260,7 +277,16 @@
                 </div>
             </div>
 
-            <div>
+            <div class="activity_mainfooter">
+                <div class="sharebox">
+                    <h3>Share</h3>
+                    <ul class="sharebox_list">
+                        <li><a href="#"><img src="./img/logo-facebook.png"></a></li>
+                        <li><a href="#"><img src="./img/logo-instagram.png"></a></li>
+                    </ul>
+                </div >
+
+                <div></div>
 
             </div>
 
