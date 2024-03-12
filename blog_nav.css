@@ -1,0 +1,82 @@
+.activity_nav_bg{
+    background-color: #650300;
+}
+.activity_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.activity_nav_List{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.activity_nav_List > li{
+    padding: 17px 0px;
+}
+.activity_nav_List > li > a{
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.activity_nav_List > li > a:hover{
+    text-decoration: underline;
+}
+.activity_nav_List > li:not(:last-child){
+    margin-right: 48px;
+}
+.activity_nav_search > span{
+   font-size: 40px;
+   color:#FFFFFF;
+}
+
+
+@media (max-width: 1200px) {
+    .container{
+        max-width: 1200px;
+    }
+
+}
+@media (max-width: 992px) {
+    .container{
+        max-width: 992px;
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 768px;
+    }
+    
+}
+@media (max-width: 576px) {
+    .container{
+        max-width: 576px;
+    }
+    .activity_container{
+        padding-top: 16px;
+        padding-bottom: 64px;
+    }
+    .activity_nav_List{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .activity_nav_List > li > a{
+        font-size: 16px;
+    }
+    .activity_nav_List > li:not(:last-child){
+        margin-right: 0px;
+    }
+    .activity_nav_search{
+        display: none;
+    }
+   
+    
+
+}
+@media (max-width: 375px) {
+    .container{
+        max-width: 375px;
+    }
+    
+}
