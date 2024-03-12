@@ -13,10 +13,25 @@
         .question_pages{
             min-height: 100vh;
             display: flex;
+            justify-content: space-between;
             flex-direction: column;
         }
         .question_container{
+            padding-top: 96px;
+            padding-bottom: 80px;
             width: 100%;
+        }
+        .question_title{
+            padding-left: 16px;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 32px;
+            border-left: 8px solid var(--primary);
+        }
+        .question_title_p{
+            font-size: 24px;
+            margin-bottom: 24px;
+            font-weight: bold;
         }
         .question_list{
             width: 66%;
@@ -26,6 +41,11 @@
         }
         .question_list > li:last-child{
             margin-bottom: 0px;
+        }
+        .question_list > li > h3{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
 
         @media (max-width: 1200px) {
@@ -45,6 +65,9 @@
             .container{
                 max-width: 768px;
             }
+            .question_container{
+                padding-top: 80px;
+            }
             .question_list{
                 width: 100%;
             }
@@ -54,9 +77,17 @@
             .container{
                 max-width: 576px;
             }
+            .question_container{
+                padding-top: 40px;
+                padding-bottom: 64px;
+            }
+            .question_title{
+                margin-bottom: 24px;
+            }
             .question_list > li > p{
                 margin-bottom: 24px;
             }
+    
 
         }
         @media (max-width: 375px) {
@@ -72,9 +103,36 @@
     <div class="question_pages">
 
         <!-- header -->
+        <header class="container-fluid header_background">
+            <div class="container header header-pad">
+                <div class="header_imgbox">
+                    <a href="./index.html">
+                        <img alt="公司logo" src="./img/logo-white.png">
+                    </a>
+                </div>
+    
+                
+                <input type="checkbox" id="menu_input" >
+                <label class="menubox" for="menu_input" >
+                    <div class="menu_line"></div>
+                </label>
+         
+    
+                <nav class="header_listbox">
+                    <ul class="header_list">
+                        <li class="header_list_item "><a href="./product_optical.html">系列鏡框</a></li>
+                        <li class="header_list_item"><a href="./store.html">門市據點</a></li>
+                        <li class="header_list_item"><a href="#">部落格</a></li>
+                        <li class="header_list_item"><a href="#">常見問題</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
         <div class="container question_container">
-            <h1>常見問題</h1>
-            <h2>我想詢問配鏡問題</h2>
+            <h2 class="question_title">常見問題</h2>
+            <p class="question_title_p">我想詢問配鏡問題</p>
 
             <ul class="question_list">
                 <li>
@@ -111,7 +169,56 @@
 
 
         </div>
+
+
         <!-- footer -->
+        <footer class="container-fluid footer_background">
+
+            <div class="container footer_container">
+                <section class="footer_section1">
+    
+                    <!-- <div class="footer_list"> -->
+                        <ul class="footer_list_left">
+                            <li class="footer_list_leftItem"><a href="./index.html">首頁</a></li>
+                            <li class="footer_list_leftItem"><a href="./product_optical.html">系列鏡框</a></li>
+                            <li class="footer_list_leftItem"><a href="./store.html">門市據點</a></li>
+                            <li class="footer_list_leftItem"><a href="">部落格</a></li>
+                            <li class="footer_list_leftItem"><a href="">常見問題</a></li>
+                        </ul>
+        
+                    <ul class="footer_list_right">
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic-social-fb.png"></a>
+                        </li>
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic_social_ig.png"></a>
+                        </li>
+                        <li class="footer_list_rightItem">
+                            <a href=""><img src="./img/ic_social_line.png"></a>
+                        </li>
+                    </ul>
+    
+                    <ul class="footer_contact_list">
+                        <li class="footer_contact_listItem"><span class="material-icons-outlined footer_icon">phone</span>0800-000-00</li>
+                        <li class="footer_contact_listItem"><span class="material-icons-outlined footer_icon">email</span>glasses@business.co</li>
+                    </ul>
+    
+                </section>
+                <div class="footer_horizontal"></div>
+    
+                <section class="footer_section2">
+                    <div>
+                        <p class="footer_copyright">Copyright © 2020 Glasses.All rights reserved.</p>
+                    </div>
+                    <ul class="footer_termsList">
+                        <li><a href="#">隱私權政策</a></li>
+                        <li><a href="#">服務條款</a></li>
+                    </ul>
+                </section>
+    
+            </div>
+    
+        </footer>
 
     </div>
 

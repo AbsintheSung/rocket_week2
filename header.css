@@ -86,10 +86,15 @@
         padding: 0px;
     }
     .header{
+        position: relative;
         flex-direction: column;
     }
     .header_listbox{
         display: none;
+        position: absolute;
+        top: 100%;
+        background-color: var(--primary);
+        z-index: 1;
     }
     .header_listbox{
         width: 100%;
