@@ -10,7 +10,7 @@
 .header_imgbox{
     padding: 16px 0px;
 }
-.header_imgbox > a{
+.header_imgbox > h1 >a{
     display: inline-block;
     width: 80px;
     height: 48px;
